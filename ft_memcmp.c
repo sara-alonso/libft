@@ -6,11 +6,11 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 00:47:07 by salonso-          #+#    #+#             */
-/*   Updated: 2026/05/28 21:27:42 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/05/28 22:40:30 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

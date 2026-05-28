@@ -6,11 +6,11 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 00:37:48 by salonso-          #+#    #+#             */
-/*   Updated: 2026/05/28 21:19:06 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/05/28 22:40:23 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
