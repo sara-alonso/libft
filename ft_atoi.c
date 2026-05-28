@@ -6,30 +6,30 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 00:34:25 by salonso-          #+#    #+#             */
-/*   Updated: 2026/05/27 00:34:27 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/05/28 22:13:40 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *nptr)
 {
 	int	num;
 	int	sign;
 
 	num = 0;
 	sign = 1;
-	while ((*str >= 9 && *str <= 13) || *str == ' ')
-		str++;
-	while (*str == '-' || *str == '+')
+	while ((*nptr >= 9 && *nptr <= 13) || *nptr == ' ')
+		nptr++;
+	while (*nptr == '-' || *nptr == '+')
 	{
-		if (*str == '-')
+		if (*nptr == '-')
 			sign *= -1;
-		str++;
+		nptr++;
 	}
-	while (*str <= '9' && *str >= '0')
+	while (*nptr <= '9' && *nptr >= '0')
 	{
 		num *= 10;
-		num += *str - '0';
-		str++;
+		num += *nptr - '0';
+		nptr++;
 	}
 	num = sign * num;
 	return (num);

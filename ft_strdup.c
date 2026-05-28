@@ -6,7 +6,7 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 20:59:48 by salonso-          #+#    #+#             */
-/*   Updated: 2026/05/27 21:06:47 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/05/28 19:49:11 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,13 @@
 
 char	*ft_strdup(const char *s)
 {
-	int		len;
-	int		i;
-	char	*r;
+	char	*dup;
+	size_t	size;
 
-	len = ft_strlen(s);
-	i = 0;
-	r = malloc(len * sizeof(char));
-	while (i < len)
-	{
-		r[i] = s[i];
-		i++;
-	}
-	r[i] = '\0';
-	return (r);
+	size = ft_strlen(s) + 1;
+	dup = malloc(size);
+	if (dup == NULL)
+		return (NULL);
+	ft_strlcpy(dup, s, size);
+	return (dup);
 }

@@ -6,24 +6,20 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 21:07:59 by salonso-          #+#    #+#             */
-/*   Updated: 2026/05/26 22:09:47 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/05/28 20:55:19 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*p;
-	unsigned char	byte_value;
-	size_t			i;
+	size_t	i;
 
-	p = (unsigned char *)s;
-	byte_value = (unsigned char)c;
 	i = 0;
 	while (i < n)
 	{
-		p[i] = byte_value;
+		((unsigned char *)s)[i] = c;
 		i++;
 	}
 	return (s);
