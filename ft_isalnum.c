@@ -6,50 +6,15 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 20:52:38 by salonso-          #+#    #+#             */
-/*   Updated: 2026/05/27 22:16:59 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/06/04 18:43:06 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isalnum(int c)
 {
-	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	return (0);
 }
-
-/*#include <ctype.h>
-#include <stdio.h>
-
-void	try_null(void)
-{
-	printf("ft_isalnum(0) \n");
-	printf("%d", ft_isalnum(0));
-	printf("\n");
-	printf("isalnum(0) \n");
-	printf("%d", isalnum(0));
-	printf("\n");
-}
-
-void	try_normal(void)
-{
-	printf("ft_isalnum(3) \n");
-	printf("%d", ft_isalnum(3));
-	printf("\n");
-	printf("isalnum(3) \n");
-	printf("%d", isalnum(3));
-	printf("\n");
-	printf("ft_isalnum(56) \n");
-	printf("%d", isalnum(56));
-	printf("\n");
-	printf("isalnum(56) \n");
-	printf("%d", isalnum(56));
-	printf("\n");
-}
-
-int	main(void)
-{
-	try_normal();
-	try_null();
-	return (0);
-}
-*/

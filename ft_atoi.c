@@ -6,7 +6,7 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 00:34:25 by salonso-          #+#    #+#             */
-/*   Updated: 2026/05/28 22:13:40 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/06/04 18:42:48 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,3 @@ int	ft_atoi(const char *nptr)
 	num = sign * num;
 	return (num);
 }
-
-/*#include <stdio.h>
-
-int	main(void)
-{
-	char	*s;
-
-	s = "-------------";
-	printf("%d\n", ft_atoi(s));
-	return (0);
-}
-*/

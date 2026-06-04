@@ -6,15 +6,11 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 19:03:58 by salonso-          #+#    #+#             */
-/*   Updated: 2026/05/28 22:11:51 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/06/04 18:44:29 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*Reserva memoria (con malloc(3)) y devuelve una
-nueva cadena de caracteres, formada por la
-concatenación de ‘s1’ y ‘s2’*/
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

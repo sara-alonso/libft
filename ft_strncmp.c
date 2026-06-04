@@ -6,7 +6,7 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 00:32:13 by salonso-          #+#    #+#             */
-/*   Updated: 2026/05/28 20:27:12 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/06/04 18:44:42 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,3 @@ int	ft_strncmp(char *s1, char *s2, size_t n)
 	diff = s1[i] - s2[i];
 	return (diff);
 }
-
-/*#include <stdio.h>
-
-int	main(void)
-{
-	int	i;
-
-	i = ft_strncmp("Hola", "Hop", 3);
-	printf("%d\n", i);
-	return (0);
-}
-*/

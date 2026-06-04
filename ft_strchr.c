@@ -25,16 +25,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)(s + i));
 	return (0);
 }
-
-/*#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char	*s;
-
-	s = "ugutygu";
-	printf("%p\n", strchr(s, 0));
-	printf("%p\n", ft_strchr(s, 0));
-	return (0);
-}*/

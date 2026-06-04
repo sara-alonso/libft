@@ -6,41 +6,28 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 20:19:48 by salonso-          #+#    #+#             */
-/*   Updated: 2026/06/04 16:53:34 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/06/04 18:20:02 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*allocate(int len)
+int	get_len(long n)
 {
-	char	*s;
-
-	s = malloc(sizeof(char) * (len + 1));
-	if (s == NULL)
-		return (NULL);
-	s[0] = '0';
-	return (s);
-}
-
-int	is_negative(int n)
-{
-	if (n < 0)
-		return (1);
-	return (0);
-}
-
-int	get_len(int n)
-{
-	int	pow_ten;
 	int	len;
 
-	len = 1;
-	pow_ten = 10;
-	while (n / pow_ten > 0)
+	len = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+	{
+		n = -n;
+		len++;
+	}
+	while (n > 0)
 	{
 		len++;
-		pow_ten *= 10;
+		n = n / 10;
 	}
 	return (len);
 }
@@ -50,25 +37,25 @@ char	*ft_itoa(int n)
 	long	nb;
 	int		len;
 	char	*s;
-	int		i;
 
 	nb = n;
 	len = get_len(nb);
-	if (is_negative(nb))
+	s = malloc(sizeof(char) * (len + 1));
+	if (s == NULL)
+		return (NULL);
+	if (nb == 0)
+		s[0] = '0';
+	if (nb < 0)
 	{
 		nb = -nb;
-		len++;
-	}
-	s = allocate(len);
-	i = len - 1;
-	while (nb != 0)
-	{
-		s[i] = ((nb % 10) + 48);
-		nb = nb / 10;
-		i--;
-	}
-	if (is_negative(n))
 		s[0] = '-';
-	s[len] = NULL;
+	}
+	s[len] = '\0';
+	while (nb > 0)
+	{
+		len--;
+		s[len] = (nb % 10) + '0';
+		nb = nb / 10;
+	}
 	return (s);
 }

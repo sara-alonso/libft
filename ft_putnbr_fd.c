@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/04 13:51:55 by marvin            #+#    #+#             */
-/*   Updated: 2026/06/04 18:22:12 by salonso-         ###   ########.fr       */
+/*   Created: 2026/06/04 18:24:17 by salonso-          #+#    #+#             */
+/*   Updated: 2026/06/04 18:33:19 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *str, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(str, fd);
-	write(fd, "\n", 1);
+	char	c;
+	long	nb;
+
+	nb = n;
+	if (nb < 0)
+	{
+		write(fd, "-", 1);
+		nb = -nb;
+	}
+	if (nb / 10 > 0)
+		ft_putnbr(nb / 10);
+	c = (nb % 10) + '0';
+	write(fd, &c, 1);
 }
