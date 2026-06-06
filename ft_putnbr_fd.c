@@ -24,7 +24,7 @@ void	ft_putnbr_fd(int n, int fd)
 		nb = -nb;
 	}
 	if (nb / 10 > 0)
-		ft_putnbr(nb / 10);
+		ft_putnbr_fd(nb / 10, fd);
 	c = (nb % 10) + '0';
 	write(fd, &c, 1);
 }
