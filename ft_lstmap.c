@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 12:06:28 by marvin            #+#    #+#             */
-/*   Updated: 2026/06/05 12:06:28 by marvin           ###   ########.fr       */
+/*   Updated: 2026/06/07 17:52:47 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *)){
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+{
 	t_list	*new_list;
 	t_list	*new_node;
 	void	*new_content;

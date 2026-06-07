@@ -2,7 +2,7 @@
 NAME = libft.a
 
 # Compilador y banderas de compilación
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 # Archivos fuente y archivos objeto

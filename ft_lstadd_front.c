@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/27 01:01:24 by salonso-          #+#    #+#             */
-/*   Updated: 2026/06/07 17:54:10 by salonso-         ###   ########.fr       */
+/*   Created: 2026/06/04 19:28:30 by salonso-          #+#    #+#             */
+/*   Updated: 2026/06/04 20:48:43 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t	i;
-	size_t	j;
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
+}
 
-	i = 0;
-	j = 0;
-	if (little[0] == 0)
-		return ((char *)big);
-	while (big[i] && i < len)
-	{
-		while (big[i + j] == little[j] && big[i + j] && i + j < len)
-		{
-			j++;
-			if (little[j] == 0)
-				return ((char *)big + i);
-		}
-		i++;
-		j = 0;
-	}
+int	main(void)
+{
+	char *str = malloc(sizeof(char) * 12);
+	strcpy(str, "Hello World");
+	t_list *list = ft_lstnew(str);
+	char *str1 = malloc(sizeof(char) * 14);
+	strcpy(str1, "To All Cursus");
+	ft_lstadd_front(&list, ft_lstnew(str1));
 	return (0);
 }

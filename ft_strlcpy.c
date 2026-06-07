@@ -6,13 +6,17 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 22:07:37 by salonso-          #+#    #+#             */
-/*   Updated: 2026/05/28 20:08:24 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/06/04 20:54:19 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+<<<<<<< HEAD
 size_t ft_strlcpy(char *dst, const char *src, size_t size)
+=======
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
+>>>>>>> baca5c9 (adding missing files from list functions)
 {
 	unsigned int	i;
 
