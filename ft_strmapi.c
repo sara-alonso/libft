@@ -6,7 +6,7 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:40:57 by marvin            #+#    #+#             */
-/*   Updated: 2026/06/04 18:23:20 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/06/07 19:23:23 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	char			*r;
 	unsigned int	len;
 
+	if (!s || !f)
+		return (NULL);
 	len = ft_strlen(s);
 	r = malloc((len + 1) * sizeof(char));
 	if (!r)

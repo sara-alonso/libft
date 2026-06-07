@@ -6,7 +6,7 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 18:55:10 by salonso-          #+#    #+#             */
-/*   Updated: 2026/05/28 22:01:44 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/06/07 18:25:25 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*sub_s;
 	unsigned int	i;
-	size_t				s_len;
+	size_t			s_len;
 
 	s_len = ft_strlen(s);
 	if (!s)

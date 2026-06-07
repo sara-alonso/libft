@@ -6,7 +6,7 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 13:17:28 by marvin            #+#    #+#             */
-/*   Updated: 2026/06/04 18:22:50 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/06/07 19:23:37 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	while (s[i])
 	{

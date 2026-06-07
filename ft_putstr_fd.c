@@ -6,7 +6,7 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 13:49:53 by marvin            #+#    #+#             */
-/*   Updated: 2026/06/04 18:22:01 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/06/07 19:23:55 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *str, int fd)
 {
 	int	i;
 
+	if (!str)
+		return ;
 	i = 0;
 	while (str[i])
 	{

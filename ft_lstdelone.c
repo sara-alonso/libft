@@ -6,7 +6,7 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 11:29:00 by marvin            #+#    #+#             */
-/*   Updated: 2026/06/07 17:48:22 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/06/07 18:24:24 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (!lst || !del)
+		return ;
 	del(lst->content);
 	free(lst);
 }

@@ -1,50 +1,48 @@
-# Nombre del archivo de la biblioteca (.a)
+# Name of the resulting file(.a)
 NAME = libft.a
 
-# Compilador y banderas de compilación
+# Compiler and compiling flags
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-# Archivos fuente y archivos objeto
+# Source files
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
 ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c \
-ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c \
+ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_strdup.c ft_calloc.c \
 ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstdelone.c ft_lstadd_back.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-OBJ = $(SRC:.c=.o) #cambiar los archivos fuente a archivos objeto
+OBJ = $(SRC:.c=.o) #change source files to object files
 
-# Archivo de encabezado
+# header file
 INCLUDE = libft.h
 
-# Crear bibliotecas y eliminar archivos 
+# create libraries and delete files 
 AR = ar rcs
 RM = rm -f
 
-#objetivo: dependencias
-#	comandos
 
-# regla por defecto que lo compila todo
+# rule that compiles everything
 all: $(NAME)
 
-# regla para crear la biblioteca @-destino ^-dependencias
+# rule to create the library @-destino ^-dependencias
 $(NAME): $(OBJ)
 	$(AR) $@ $^
 
-# Regla para pasar archivos .c a .o
+# rule to pass files .c to .o
 %.o: %.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-# Regla para eliminar los archivos .o creados
+# rule to delete files .o created
 clean:
 	$(RM) $(OBJ)
 
-# Regla para eliminar archivos .o y .a
+# rule to delete files .o and .a
 fclean:
 	$(RM) $(NAME)
 	
-#Regla para recompilar todo desde cero
+# rule to compile everything from scratch
 re: fclean all
 
-.PHONY: all clean fclean re # indica al Makefile que todo lo que se escriba aquí son COMANDOS
+.PHONY: all clean fclean re # tells the Makefile this are commands

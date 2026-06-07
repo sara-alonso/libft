@@ -6,7 +6,7 @@
 /*   By: salonso- <salonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 13:51:55 by marvin            #+#    #+#             */
-/*   Updated: 2026/06/04 18:22:12 by salonso-         ###   ########.fr       */
+/*   Updated: 2026/06/07 19:24:07 by salonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *str, int fd)
 {
+	if (!str)
+		return ;
 	ft_putstr_fd(str, fd);
 	write(fd, "\n", 1);
 }
